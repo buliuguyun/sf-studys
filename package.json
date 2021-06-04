@@ -1,36 +1,25 @@
 {
-  "name": "test",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "vue3",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "set type=dev&webpack",
-    "server": "webpack-dev-server",
-    "build": "set type=build&webpack"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^3.0.0"
+  },
   "devDependencies": {
-    "autoprefixer": "^10.2.6",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^5.2.6",
-    "file-loader": "^6.2.0",
-    "html-withimg-loader": "^0.1.16",
-    "less": "^4.1.1",
-    "less-loader": "^9.0.0",
-    "mini-css-extract-plugin": "^1.6.0",
-    "postcss-loader": "^5.3.0",
-    "style-loader": "^2.0.0",
-    "uglifyjs-webpack-plugin": "^2.2.0",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.38.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.2"
-  },
-  "description": ""
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0",
+    "typescript": "~4.1.5"
+  }
 }
