@@ -123,3 +123,38 @@ Vue.use(eventBus);
 
 - 触发 事件 this.$bus.$emit('事件名称', 传递参数)
 - 监听事件 this.$bus.$on('事件名称', 处理函数),停止监听 this.$bus.$off('事件名称', 处理函数)
+
+## 判断是数组还是对象
+
+```js
+  第一种：
+  Object.prototype.toString.call({}) // [object Object]
+  Object.prototype.toString.call([]) // [object Array]
+  第二种：
+  Array.isArray([]) // true
+  Array.isArray({}) // false
+  第三种：
+  arr instanceof Array // true
+  obj instanceof Array // false
+  第四种：
+  arr.constructor === Array // true
+  obj.constructor === Array // false
+```
+
+## 深拷贝和浅拷贝
+
+### JSON.stringfy()和 JSON.parse()
+
+当值为 undefined、function、symbol 会在转换过程中被忽略。对象值有这三种的话用这种方法会导致属性丢失
+
+### JQ extend
+
+- $.extend( [deep ], target, object1 [, objectN ] )
+- deep 表示是否深拷贝，为 true 为深拷贝，为 false，则为浅拷贝
+- target Object 类型 目标对象，其他对象的成员属性将被附加到该对象上。
+- object1 objectN 可选。 Object 类型 第一个以及第 N 个被合并的对象。
+
+## vue hash 模式和 history 模式
+
+- hash 模式下，仅 hash 符号之前的内容会被包含在请求中，因此对于后端来说，即使没有做到对路由的全覆盖，也不会返回 404 错误。
+- history 模式下，前端的 URL 必须和实际向后端发起请求的 URL 一致，如果后端缺少路由处理，将返回 404 错误。
